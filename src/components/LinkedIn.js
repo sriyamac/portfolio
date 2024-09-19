@@ -1,5 +1,3 @@
-// src/components/LinkedIn.js
-
 import React from 'react';
 import { Container, Typography, Button, useMediaQuery } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -9,32 +7,31 @@ const LinkedInSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const navbarHeight = isMobile ? 56 : 64;
-
   return (
     <div
       id="LinkedIn"
       style={{
-        minHeight: `calc(100vh - ${navbarHeight}px)`,
-        paddingTop: `${navbarHeight}px`,
-        backgroundColor: '#F3EDE7', // Nude color for LinkedIn section
+        minHeight: '100vh',
+        backgroundColor: '#F3EDE7',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 0,
+        padding: 0,
       }}
     >
-      <Container
-        maxWidth="sm"
-        data-aos="fade-left"
-        style={{ textAlign: 'center', paddingTop: isMobile ? '30px' : '50px' }}
-      >
-        <Typography variant={isMobile ? 'h4' : 'h3'} gutterBottom>
+      <Container maxWidth="sm" data-aos="fade-left" style={{ textAlign: 'center', margin: 0 }}>
+        <Typography variant={isMobile ? 'h3' : 'h2'} gutterBottom style={{ fontWeight: 'bold' }}>
           LinkedIn
         </Typography>
         <Button
           variant="contained"
           color="primary"
           startIcon={<LinkedInIcon />}
-          href="https://www.linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/sriya-machunuri-21b321195/"
           target="_blank"
-          size={isMobile ? 'small' : 'medium'}
+          size={isMobile ? 'medium' : 'large'}
+          style={{ marginTop: '20px' }}
         >
           Visit my LinkedIn
         </Button>

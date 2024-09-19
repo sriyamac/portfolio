@@ -1,12 +1,10 @@
-// src/App.js
-
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
 import LinkedInSection from './components/LinkedIn';
 import Contacts from './components/Contacts';
-import Footer from './components/Footer'; // Import the Footer component
+import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useTheme } from '@mui/material/styles';
@@ -16,6 +14,8 @@ function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const navbarHeight = isMobile ? 56 : 64;
+
   useEffect(() => {
     AOS.init({
       duration: isMobile ? 600 : 800,
@@ -24,13 +24,16 @@ function App() {
   }, [isMobile]);
 
   return (
-    <div>
+    <div style={{ margin: 0, padding: 0 }}>
       <Navbar />
-      <AboutMe />
-      <Resume />
-      <LinkedInSection />
-      <Contacts />
-      <Footer /> {/* Add the Footer component here */}
+      {/* Wrapper div to offset the content by the navbar height */}
+      <div style={{ marginTop: `${navbarHeight}px`, margin: 0, padding: 0 }}>
+        <AboutMe />
+        <Resume />
+        <LinkedInSection />
+        <Contacts />
+        <Footer />
+      </div>
     </div>
   );
 }

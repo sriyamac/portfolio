@@ -1,6 +1,3 @@
-/* src/index.css */
-
-/* Global styles, optional */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -8,12 +5,10 @@ body {
   color: #000;
 }
 
-/* Adjust scroll behavior for smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hide scrollbar for smoother appearance */
 body::-webkit-scrollbar {
   display: none;
 }

@@ -1,5 +1,3 @@
-// src/components/Navbar.js
-
 import React, { useState, useEffect } from 'react';
 import {
   AppBar,
@@ -22,7 +20,6 @@ const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  // Initialize AOS for Navbar
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -36,7 +33,6 @@ const Navbar = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  // Custom styles for hover effect
   const linkStyle = {
     textDecoration: 'none',
     color: '#fff',
@@ -114,7 +110,7 @@ const Navbar = () => {
                 activeClass="active"
                 spy={true}
                 onMouseEnter={(e) => {
-                  e.target.style.color = '#ffd700';
+                  e.target.style.color = '#f5ccbf';
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.color = '#fff';

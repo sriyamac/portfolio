@@ -1,12 +1,5 @@
-// src/components/Contacts.js
-
 import React from 'react';
-import {
-  Container,
-  Typography,
-  IconButton,
-  useMediaQuery,
-} from '@mui/material';
+import { Container, Typography, IconButton, useMediaQuery } from '@mui/material';
 import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 
@@ -14,48 +7,43 @@ const Contacts = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const navbarHeight = isMobile ? 56 : 64;
-  const iconSize = isMobile ? 'medium' : 'large';
+  const iconSize = isMobile ? 'large' : 'inherit';
 
   return (
     <div
       id="Contacts"
       style={{
-        minHeight: `calc(100vh - ${navbarHeight}px)`,
-        paddingTop: `${navbarHeight}px`,
-        backgroundColor: '#F8F1EC', // Nude color for Contacts section
+        minHeight: '100vh',
+        backgroundColor: '#F8F1EC',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 0,
+        padding: 0,
       }}
     >
-      <Container
-        maxWidth="sm"
-        data-aos="fade-up"
-        style={{ textAlign: 'center', paddingTop: isMobile ? '30px' : '50px' }}
-      >
-        <Typography variant={isMobile ? 'h4' : 'h3'} gutterBottom>
+      <Container maxWidth="sm" data-aos="fade-up" style={{ textAlign: 'center', margin: 0 }}>
+        <Typography variant={isMobile ? 'h3' : 'h2'} gutterBottom style={{ fontWeight: 'bold' }}>
           Contacts
         </Typography>
-        <div>
+        <div style={{ marginTop: '30px' }}>
           <IconButton
-            href="https://github.com/yourusername"
+            href="https://github.com/sriyamac"
             target="_blank"
             color="inherit"
-            size={isMobile ? 'small' : 'medium'}
+            size="large"
           >
             <GitHub fontSize={iconSize} />
           </IconButton>
           <IconButton
-            href="https://www.linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/sriya-machunuri-21b321195/"
             target="_blank"
             color="inherit"
-            size={isMobile ? 'small' : 'medium'}
+            size="large"
           >
             <LinkedIn fontSize={iconSize} />
           </IconButton>
-          <IconButton
-            href="mailto:youremail@example.com"
-            color="inherit"
-            size={isMobile ? 'small' : 'medium'}
-          >
+          <IconButton href="mailto:sriyamac@gmail.com" color="inherit" size="large">
             <Email fontSize={iconSize} />
           </IconButton>
         </div>
