@@ -91,7 +91,7 @@ const AboutMe = () => {
             >
               software developer
             </Box>{' '}
-            who enjoys creating cool things.
+            who enjoys creating cool stuff
           </Typography>
         </Box>
 
