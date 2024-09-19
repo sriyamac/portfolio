@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-const LinkedInSection = () => {
+const Projects = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const handleLinkedInClick = () => {
-    window.open('https://www.linkedin.com/in/sriya-machunuri-21b321195/', '_blank');
+  const handleProjectsClick = () => {
+    window.open('https://github.com/sriyamac', '_blank');
   };
 
   const containerRef = React.useRef(null);
@@ -24,9 +24,9 @@ const LinkedInSection = () => {
   return (
     <div
       id="Links"
-      onClick={handleLinkedInClick}
+      onClick={handleProjectsClick}
       style={{
-        backgroundColor: '#F3DDD2', // Darker nude for LinkedIn
+        backgroundColor: '#EFD3C5', // Darkest nude for Projects
         padding: isMobile ? '40px 20px' : '80px 40px',
         textAlign: 'center',
         cursor: 'pointer',
@@ -37,7 +37,7 @@ const LinkedInSection = () => {
       onMouseLeave={handleMouseLeave}
     >
       <Container maxWidth="md">
-        <LinkedInIcon
+        <GitHubIcon
           style={{
             fontSize: isMobile ? 60 : 80,
             color: '#333',
@@ -48,11 +48,11 @@ const LinkedInSection = () => {
           gutterBottom
           style={{ fontWeight: 'bold', marginTop: '20px' }}
         >
-          LinkedIn
+          Projects
         </Typography>
       </Container>
     </div>
   );
 };
 
-export default LinkedInSection;
+export default Projects;

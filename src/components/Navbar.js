@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -13,21 +13,14 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as ScrollLink } from 'react-scroll';
 import { useTheme } from '@mui/material/styles';
-import AOS from 'aos';
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
-
-  const menuItems = ['About Me', 'Resume', 'LinkedIn'];
+  // Menu items
+  const menuItems = ['About Me', 'Links'];
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
@@ -38,16 +31,16 @@ const Navbar = () => {
     color: '#fff',
     marginLeft: 15,
     transition: 'color 0.3s',
+    fontSize: '1rem',
   };
 
   return (
     <AppBar
       position="fixed"
-      data-aos="fade-down"
       style={{
         background: 'rgba(0, 0, 0, 0.7)',
         boxShadow: 'none',
-        zIndex: theme.zIndex.drawer + 1,
+        zIndex: theme.zIndex.drawer + 1, // Ensure drawer doesn't overlap AppBar
       }}
     >
       <Toolbar>
@@ -71,6 +64,12 @@ const Navbar = () => {
               ModalProps={{
                 keepMounted: true,
               }}
+              PaperProps={{
+                style: {
+                  marginTop: isMobile ? 56 : 64, // Offset the Drawer below the AppBar
+                  background: 'linear-gradient(to bottom, #fff1e6, #f8e7dc)', // Gradient for the drawer
+                },
+              }}
             >
               <List>
                 {menuItems.map((text) => (
@@ -81,9 +80,9 @@ const Navbar = () => {
                     style={{ width: 200 }}
                   >
                     <ScrollLink
-                      to={text.replace(' ', '')}
+                      to={text.replace(/ /g, '')}
                       smooth={true}
-                      duration={500}
+                      duration={5}
                       offset={-70}
                       style={{
                         textDecoration: 'none',
@@ -102,7 +101,7 @@ const Navbar = () => {
           menuItems.map((section) => (
             <Button key={section}>
               <ScrollLink
-                to={section.replace(' ', '')}
+                to={section.replace(/ /g, '')}
                 smooth={true}
                 duration={5}
                 offset={-70}

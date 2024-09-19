@@ -8,35 +8,35 @@ const Footer = () => {
       style={{
         backgroundColor: '#333',
         color: '#fff',
-        padding: '20px 0',
+        padding: '10px 0',
         textAlign: 'center',
       }}
     >
       <Container maxWidth="md">
         <div>
-        <strong>@sriyamac</strong>
+          <strong>@sriyamac</strong>
           <IconButton
             href="https://github.com/sriyamac"
             target="_blank"
             color="inherit"
-            size="large"
+            size="small"
           >
-            <GitHub fontSize="inherit" />
+            <GitHub fontSize="small" />
           </IconButton>
           <IconButton
             href="https://www.linkedin.com/in/sriya-machunuri-21b321195/"
             target="_blank"
             color="inherit"
-            size="large"
+            size="small"
           >
-            <LinkedIn fontSize="inherit" />
+            <LinkedIn fontSize="small" />
           </IconButton>
           <IconButton
             href="mailto:sriyamac@gmail.com"
             color="inherit"
-            size="large"
+            size="small"
           >
-            <Email fontSize="inherit" />
+            <Email fontSize="small" />
           </IconButton>
         </div>
       </Container>

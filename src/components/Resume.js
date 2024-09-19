@@ -1,40 +1,55 @@
 import React from 'react';
-import { Container, Typography, Button, useMediaQuery } from '@mui/material';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { Container, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
 const Resume = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const handleResumeClick = () => {
+    window.open('resume.pdf', '_blank');
+  };
+
+  const containerRef = React.useRef(null);
+
+  const handleMouseEnter = () => {
+    containerRef.current.style.transform = 'scale(1.05)';
+  };
+
+  const handleMouseLeave = () => {
+    containerRef.current.style.transform = 'scale(1)';
+  };
+
   return (
     <div
-      id="Resume"
+      id="Links"
+      onClick={handleResumeClick}
       style={{
-        minHeight: '100vh',
-        backgroundColor: '#EFE5DC',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: 0,
-        padding: 0,
+        backgroundColor: '#F8E7DC', // Slightly darker nude
+        padding: isMobile ? '40px 20px' : '80px 40px',
+        textAlign: 'center',
+        cursor: 'pointer',
+        transition: 'transform 0.3s',
       }}
+      ref={containerRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <Container maxWidth="sm" data-aos="fade-right" style={{ textAlign: 'center', margin: 0 }}>
-        <Typography variant={isMobile ? 'h3' : 'h2'} gutterBottom style={{ fontWeight: 'bold' }}>
+      <Container maxWidth="md">
+        <PictureAsPdfIcon
+          style={{
+            fontSize: isMobile ? 60 : 80,
+            color: '#333',
+          }}
+        />
+        <Typography
+          variant={isMobile ? 'h4' : 'h3'}
+          gutterBottom
+          style={{ fontWeight: 'bold', marginTop: '20px' }}
+        >
           Resume
         </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<PictureAsPdfIcon />}
-          href="resume.pdf"
-          target="_blank"
-          size={isMobile ? 'medium' : 'large'}
-          style={{ marginTop: '20px' }}
-        >
-          View Resume
-        </Button>
       </Container>
     </div>
   );

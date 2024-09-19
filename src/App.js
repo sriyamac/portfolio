@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
 import LinkedInSection from './components/LinkedIn';
+import Projects from './components/Projects'; 
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -29,6 +30,7 @@ function App() {
         <AboutMe />
         <Resume />
         <LinkedInSection />
+        <Projects /> 
         <Footer />
       </div>
     </div>
