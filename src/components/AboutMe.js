@@ -22,8 +22,8 @@ const AboutMe = () => {
       id="AboutMe"
       style={{
         minHeight: '100vh',
-        // Adjust the gradient to make it more prominent
-        background: 'linear-gradient(to bottom, #fff1e6 20%, #f5d7c5 50%, #F8E7DC 100%)',
+        // More noticeable gradient
+        background: 'linear-gradient(to bottom, #fff1e6 0%, #f5d7c5 50%, #f8e7dc 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
