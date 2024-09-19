@@ -45,8 +45,10 @@ const Navbar = () => {
     >
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: 1, color: '#fff' }}>
-          sriyamac
+          sriya
+          <span style={{ color: '#000000' }}><strong>mac</strong></span> 
         </Typography>
+
         {isMobile ? (
           <>
             <IconButton
@@ -66,8 +68,8 @@ const Navbar = () => {
               }}
               PaperProps={{
                 style: {
-                  marginTop: isMobile ? 56 : 64, // Offset the Drawer below the AppBar
-                  background: 'linear-gradient(to bottom, #fff1e6, #f8e7dc)', // Gradient for the drawer
+                  marginTop: isMobile ? 56 : 64, 
+                  background: 'linear-gradient(to bottom, #fff1e6, #f8e7dc)',
                 },
               }}
             >

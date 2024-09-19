@@ -3,7 +3,6 @@ import { Container, Typography, Avatar, Box, Button, useMediaQuery } from '@mui/
 import { useTheme, keyframes } from '@mui/material/styles';
 import { Link as ScrollLink } from 'react-scroll';
 
-// Define the fade-in keyframe animation
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -42,7 +41,7 @@ const AboutMe = () => {
         >
           <Avatar
             alt="Profile Picture"
-            src="profile.jpg"
+            src={`${process.env.PUBLIC_URL}/profile.jpg`}
             sx={{
               width: isMobile ? 120 : 180,
               height: isMobile ? 120 : 180,

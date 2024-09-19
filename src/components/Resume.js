@@ -8,7 +8,7 @@ const Resume = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleResumeClick = () => {
-    window.open('resume.pdf', '_blank');
+    window.open(`${process.env.PUBLIC_URL}/resume.pdf`, '_blank');
   };
 
   const containerRef = React.useRef(null);
