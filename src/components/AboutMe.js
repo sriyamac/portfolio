@@ -32,6 +32,7 @@ const AboutMe = () => {
       }}
     >
       <Container maxWidth="sm" data-aos="fade-up" style={{ margin: 0 }}>
+        
         <Box
           sx={{
             animation: `${fadeIn} 1s ease-in`,
@@ -53,7 +54,7 @@ const AboutMe = () => {
         <Box
           sx={{
             animation: `${fadeIn} 1s ease-in`,
-            animationDelay: '1s',
+            animationDelay: '0.5s', 
             animationFillMode: 'both',
           }}
         >
@@ -73,7 +74,15 @@ const AboutMe = () => {
               Sriya
             </Box>
           </Typography>
+        </Box>
 
+        <Box
+          sx={{
+            animation: `${fadeIn} 1s ease-in`,
+            animationDelay: '1.5s', 
+            animationFillMode: 'both',
+          }}
+        >
           <Typography
             variant={isMobile ? 'h6' : 'h5'}
             style={{
@@ -82,7 +91,7 @@ const AboutMe = () => {
               marginBottom: '20px',
             }}
           >
-            a passionate{' '}
+            a {' '}
             <Box
               component="span"
               sx={{
@@ -91,14 +100,14 @@ const AboutMe = () => {
             >
               software developer
             </Box>{' '}
-            who enjoys creating cool stuff
+            at fidelity investments 
           </Typography>
         </Box>
 
         <Box
           sx={{
             animation: `${fadeIn} 1s ease-in`,
-            animationDelay: '2s',
+            animationDelay: '2.5s', 
             animationFillMode: 'both',
           }}
         >
@@ -127,7 +136,7 @@ const AboutMe = () => {
                 },
               }}
             >
-              Know More
+              know more
             </Button>
           </ScrollLink>
         </Box>
