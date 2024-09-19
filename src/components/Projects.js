@@ -26,7 +26,7 @@ const Projects = () => {
       id="Links"
       onClick={handleProjectsClick}
       style={{
-        backgroundColor: '#EFD3C5', // Darkest nude for Projects
+        backgroundColor: '#EFD3C5', 
         padding: isMobile ? '40px 20px' : '80px 40px',
         textAlign: 'center',
         cursor: 'pointer',

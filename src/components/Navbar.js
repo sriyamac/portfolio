@@ -40,7 +40,7 @@ const Navbar = () => {
       style={{
         background: 'rgba(0, 0, 0, 0.7)',
         boxShadow: 'none',
-        zIndex: theme.zIndex.drawer + 1, // Ensure drawer doesn't overlap AppBar
+        zIndex: theme.zIndex.drawer + 1, 
       }}
     >
       <Toolbar>

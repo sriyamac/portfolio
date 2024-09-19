@@ -26,7 +26,7 @@ const LinkedInSection = () => {
       id="Links"
       onClick={handleLinkedInClick}
       style={{
-        backgroundColor: '#F3DDD2', // Darker nude for LinkedIn
+        backgroundColor: '#F3DDD2', 
         padding: isMobile ? '40px 20px' : '80px 40px',
         textAlign: 'center',
         cursor: 'pointer',

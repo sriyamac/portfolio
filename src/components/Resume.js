@@ -26,7 +26,7 @@ const Resume = () => {
       id="Links"
       onClick={handleResumeClick}
       style={{
-        backgroundColor: '#F8E7DC', // Slightly darker nude
+        backgroundColor: '#F8E7DC', 
         padding: isMobile ? '40px 20px' : '80px 40px',
         textAlign: 'center',
         cursor: 'pointer',
