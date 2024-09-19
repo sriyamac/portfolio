@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.aa8cf2e9.css",
-    "main.js": "/portfolio/static/js/main.75393bbe.js",
-    "index.html": "/portfolio/index.html",
-    "main.aa8cf2e9.css.map": "/portfolio/static/css/main.aa8cf2e9.css.map",
-    "main.75393bbe.js.map": "/portfolio/static/js/main.75393bbe.js.map"
+    "main.css": "/sriyamac.com/static/css/main.aa8cf2e9.css",
+    "main.js": "/sriyamac.com/static/js/main.bd25be27.js",
+    "index.html": "/sriyamac.com/index.html",
+    "main.aa8cf2e9.css.map": "/sriyamac.com/static/css/main.aa8cf2e9.css.map",
+    "main.bd25be27.js.map": "/sriyamac.com/static/js/main.bd25be27.js.map"
   },
   "entrypoints": [
     "static/css/main.aa8cf2e9.css",
-    "static/js/main.75393bbe.js"
+    "static/js/main.bd25be27.js"
   ]
 }
