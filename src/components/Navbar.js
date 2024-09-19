@@ -27,7 +27,7 @@ const Navbar = () => {
     });
   }, []);
 
-  const menuItems = ['About Me', 'Resume', 'LinkedIn', 'Contacts'];
+  const menuItems = ['About Me', 'Resume', 'LinkedIn'];
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);

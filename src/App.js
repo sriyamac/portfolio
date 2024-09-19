@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
 import LinkedInSection from './components/LinkedIn';
-import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -26,12 +25,10 @@ function App() {
   return (
     <div style={{ margin: 0, padding: 0 }}>
       <Navbar />
-      {/* Wrapper div to offset the content by the navbar height */}
       <div style={{ marginTop: `${navbarHeight}px`, margin: 0, padding: 0 }}>
         <AboutMe />
         <Resume />
         <LinkedInSection />
-        <Contacts />
         <Footer />
       </div>
     </div>
